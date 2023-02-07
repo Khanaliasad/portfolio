@@ -35,7 +35,7 @@ const About = ({ pageInfo }: Props) => {
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={urlFor(pageInfo?.profilePic).toString()}
+              src={pageInfo ? urlFor(pageInfo?.profilePic).toString() : ""}
               alt="AboutImage"
               className="rounded-full object-cover md:rounded-lg "
             ></img>

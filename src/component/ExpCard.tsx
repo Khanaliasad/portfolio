@@ -28,10 +28,10 @@ function ExpCard({ data }: Props) {
         <div className="flex space-x-2 my-2">
           {data.technologies.map((elem) => {
             return (
-              <div key={elem._id} className="m-1">
+              <div key={elem?._id} className="m-1">
                 <Image
-                  src={urlFor(elem.image)?.url()}
-                  alt={elem.title}
+                  src={urlFor(elem?.image)?.url()}
+                  alt={elem?.title}
                   className="object-cover rounded-full bg-slate-800  "
                   height="50px"
                   width="50px"

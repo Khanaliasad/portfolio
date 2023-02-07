@@ -13,7 +13,7 @@ type Props = {
 function Hero({ pageInfo }: Props) {
   const [words] = useTypewriter({
     words: [
-      `HI! ${pageInfo.name} Here`,
+      `HI! ${pageInfo ? pageInfo?.name : "Name"} Here`,
       " Developer.",
       " Learner.",
       " Coder.",
@@ -30,7 +30,7 @@ function Hero({ pageInfo }: Props) {
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden ">
       <BackGroundCircles />
       <Image
-        src={urlFor(pageInfo?.heroImage).url()}
+        src={pageInfo ? urlFor(pageInfo?.heroImage)?.url() : ""}
         width="175px"
         height="175px"
         className="rounded-full object-cover"
