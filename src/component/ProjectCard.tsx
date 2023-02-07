@@ -13,8 +13,9 @@ type Props = {
 
 function ProjectCard({ Index, Length, Data }: Props) {
   const imageRef = urlFor(Data?.image);
-  imageRef.options.baseUrl = "cdn.sanity.io/images/";
-  console.log(imageRef);
+  // imageRef.options.baseUrl = "https://cdn.sanity.io/images/";
+  // console.log(imageRef);
+  const imageSource = "asdasd";
   return (
     <>
       <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen ">
@@ -25,7 +26,8 @@ function ProjectCard({ Index, Length, Data }: Props) {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <Image
-            src={imageRef.url()}
+            // src={imageRef.url()}
+            src={"/ASADEnterpriseLOGO-01.png"}
             width="100px"
             height="100px"
             alt="Case Study Image"

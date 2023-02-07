@@ -1,11 +1,11 @@
 {
   "root": true,
+  "api": {
+    "projectId": "4i2nmol9",
+    "dataset": "production"
+  },
   "project": {
     "name": "portfolio-Asad-2022"
-  },
-  "api": {
-    "projectId": "fm9vv3kl",
-    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",

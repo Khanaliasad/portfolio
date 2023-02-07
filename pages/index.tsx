@@ -19,7 +19,7 @@ import { fetchSocials } from "../utils/fetchSocials";
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
-  skills: Skill;
+  skills: Skill[];
   projects: Project[];
   social: Social;
 };
@@ -38,7 +38,7 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
         className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-30 
       scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
-        <Header social={social} />
+        <Header social={[social]} />
 
         {/* hero */}
         <section id="hero" className="snap-start ">
@@ -92,7 +92,7 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+export const getStaticProps: any = async () => {
   const pageInfo: PageInfo = await fetchPageInfos();
   const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
@@ -106,5 +106,5 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       social,
     },
-  };
+  } as unknown;
 };

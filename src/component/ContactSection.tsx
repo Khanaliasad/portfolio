@@ -24,7 +24,7 @@ const ContactSection = (props: Props) => {
       </h3>
       <div>
         <h4 className="text-4xl font-semibold text-center font-serif">
-          <span className="font-bold">I've Got Just What You Need. </span>
+          <span className="font-bold">I&apos;ve Got Just What You Need. </span>
           <span className="underline decoraton-[#F7AB0A]/50">lets Talk</span>
         </h4>
         <br />
@@ -79,8 +79,8 @@ const ContactSection = (props: Props) => {
               className="contactInput"
               name="desc"
               id="desc"
-              cols="1"
-              rows="4"
+              cols={1}
+              rows={4}
             ></textarea>
             <button className="heroButton text-xl font-semibold" type="submit">
               Submit

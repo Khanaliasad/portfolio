@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Social } from "../../typings";
 type Props = {
-  social: Social[];
+  social?: Social[];
 };
 
 function Header({ social }: Props) {
@@ -18,7 +18,7 @@ function Header({ social }: Props) {
             transition={{ duration: 1.5 }}
             className="flex flex-row items-center "
           >
-            {social.map((social) => {
+            {social?.map((social) => {
               return (
                 <SocialIcon
                   key={social._id}
