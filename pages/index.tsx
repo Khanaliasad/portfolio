@@ -72,7 +72,7 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
         <div className=" w-full mx-auto">
           <Link href="#hero">
             <div className="flex items-center">
-              <span>Powered by Asad </span>
+              <span>Powered by Asad Enterprise</span>
               <span className="">
                 <Image
                   src="/ASADEnterpriseLOGO-01.png"
