@@ -16,10 +16,12 @@ function ExpCard({ data }: Props) {
         viewport={{ once: true }}
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px]  object-cover object-center"
       >
-        <img
+        <Image
           src={urlFor(data?.companyImage).url()}
           alt={`logo of ${data?.company}`}
           className="object-cover"
+          width={300}
+          height={300}
         />
       </motion.div>
       <div className="px-0 md:px-10">
@@ -33,8 +35,8 @@ function ExpCard({ data }: Props) {
                   src={urlFor(elem?.image)?.url()}
                   alt={elem?.title}
                   className="object-cover rounded-full bg-slate-800  "
-                  height="50px"
-                  width="50px"
+                  height={50}
+                  width={50}
                 />
               </div>
             );

@@ -16,7 +16,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const project: Project[] = await sanityClient.fetch(query);
+  const project: Project[] = await sanityClient?.fetch(query);
 
-  res.status(200).json({ project });
+  res?.status(200)?.json({ project });
 }

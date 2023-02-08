@@ -21,7 +21,7 @@ function Skills({ skills }: Props) {
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
         hover Over a skill for currency proficiency
       </h3>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4 gap-1 gap-5">
         {skills.map((elem, index) => {
           return (
             <SkillImage

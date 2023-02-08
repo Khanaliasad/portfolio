@@ -16,6 +16,8 @@ import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
 import { fetchSocials } from "../utils/fetchSocials";
 
+import mainLogo from "./../public/asadEnterpriseLogo.png";
+
 type Props = {
   pageInfo: PageInfo;
   experiences: Experience[];
@@ -75,11 +77,11 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
               <span>Powered by Asad Enterprise</span>
               <span className="">
                 <Image
-                  src="/ASADEnterpriseLOGO-01.png"
+                  src={mainLogo}
                   alt="Asad Logo"
                   width={50}
                   height={50}
-                  className="object-contain"
+                  // className="object-contain"
                 />
               </span>
             </div>
