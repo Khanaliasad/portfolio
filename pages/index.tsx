@@ -57,7 +57,10 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
           <ExperienceCards experiences={experiences} />
         </section>
         {/* Skills */}
-        <section id="Skills" className="snap-center">
+        <section
+          id="Skills"
+          className="snap-center overflow-x-hidden h-[100%] w-[100%] mx-auto"
+        >
           <Skills skills={skills} />
         </section>
         {/* Projects */}
@@ -75,12 +78,11 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
           <Link href="#hero">
             <div className="flex items-center">
               <span>Powered by Asad Enterprise</span>
-              <span className="">
+              <span className="w-20 h-20">
                 <Image
                   src={mainLogo}
                   alt="Asad Logo"
-                  width={50}
-                  height={50}
+
                   // className="object-contain"
                 />
               </span>

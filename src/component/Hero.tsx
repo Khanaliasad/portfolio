@@ -36,11 +36,11 @@ function Hero({ pageInfo }: Props) {
         className="rounded-full object-cover"
         alt="Profile Picture Asad Ali Khan"
       ></Image>
-      <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
+      <h2 className="text-sm uppercase text-gray-50 pb-2 tracking-[15px] z-20">
         {pageInfo?.role}
       </h2>
-      <h1 className="text-5xl lg:text-6xl font-semibold px-10">
-        <span className="mr-3">{words}</span>
+      <h1 className="text-5xl lg:text-6xl font-semibold px-10 z-20">
+        <span className="mr-3 ">{words}</span>
         <Cursor cursorColor="#F7AB0a" />
       </h1>
       <div className="z-10">

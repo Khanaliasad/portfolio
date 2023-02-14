@@ -18,9 +18,9 @@ function SkillImage({ directionLeft, data }: Props) {
         initial={{ opacity: 0, x: directionLeft ? -200 : 200 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="w-24 h-24 rounded-full xl:w-[150px] xl:h-[150px] object-cover object-center border-gray-500 fliter group-hover:grayscale transition duration-300 ease-in-out"
+        className="w-24 h-24 rounded-full  object-cover object-center border-gray-500 fliter group-hover:grayscale transition duration-300 ease-in-out"
       >
-        <span className="w-12 h-12 sm:w-[100px] sm:h-[100px] block relative">
+        <span className="w-12 h-12 sm:w-[100px] sm:h-[100px] xl:w-[150px] xl:h-[150px] block relative ">
           <Image
             src={urlFor(data?.image)?.url()}
             alt={data.title}
@@ -32,7 +32,7 @@ function SkillImage({ directionLeft, data }: Props) {
           />
         </span>
         <div className="absolute  w-12 h-12 sm:w-[100px] sm:h-[100px] rounded-full xl:w-[150px] xl:h-[150px] top-1  opacity-0 border-gray-500 group-hover:opacity-80 group-hover:bg-white transition duration-300 ease-in-out">
-          <div className="flex  items-center justify-center h-full">
+          <div className="flex items-center justify-center h-full">
             <p className="text-xl font-bold text-black opacity-100">
               {data.progress}%
             </p>

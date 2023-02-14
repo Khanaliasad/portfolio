@@ -19,11 +19,11 @@ const ContactSection = (props: Props) => {
 
   return (
     <article className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 lg:text-2xl ">
         Contact Me
       </h3>
       <div>
-        <h4 className="text-4xl font-semibold text-center font-serif">
+        <h4 className="text-xl lg:text-4xl font-semibold text-center font-serif overflow-auto">
           <span className="font-bold">I&apos;ve Got Just What You Need. </span>
           <span className="underline decoraton-[#F7AB0A]/50">lets Talk</span>
         </h4>
@@ -31,18 +31,18 @@ const ContactSection = (props: Props) => {
         <div>
           <div className="flex items-center justify-center">
             <PhoneIcon className=" text-[#F7ab0A] h-7 w-7" />
-            <p className="text-2xl ">+92 308 0027899</p>
+            <p className="lg:text-2xl ">+92 308 0027899</p>
           </div>
           <div className="flex items-center justify-center">
             <EnvelopeIcon className=" text-[#F7ab0A] h-7 w-7" />
-            <p className="text-2xl ">Khanaliasad.aak@gmail.com</p>
+            <p className="lg:text-2xl ">Khanaliasad.aak@gmail.com</p>
           </div>
           <div className="flex items-center justify-center">
             <MapPinIcon className=" text-[#F7ab0A] h-7 w-7" />
-            <p className="text-2xl ">Karachi,Pakistan</p>
+            <p className="lg:text-2xl ">Karachi,Pakistan</p>
           </div>
         </div>
-        <div>
+        <div className="scale-50 sm:scale-100 ">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-2 w-fit mx-auto mt-5"
@@ -95,7 +95,7 @@ const ContactSection = (props: Props) => {
 export default ContactSection;
 
 {
-  /* <h3 className="max-w-6xl text-2xl">
+  /* <h3 className="max-w-6xl lg:text-2xl">
     asdasdasdasd Lorem ipsum dolor sit amet, consectetur adipisicing elit.
     At tempore labore mollitia nihil obcaecati accusamus quos magnam animi
     atque optio? Corporis, cumque vitae! Doloribus beatae est ratione velit
