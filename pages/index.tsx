@@ -49,7 +49,7 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
 
         {/* About */}
         <section id="About" className="snap-center">
-          <About pageInfo={pageInfo} />
+          <About name={"About"} title={""} pageInfo={pageInfo} />
         </section>
         {/* #Experience*/}
 
@@ -74,18 +74,18 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
       </main>
 
       <footer className="fixed bottom-0 right-1/2 cursor-pointer  translate-x-1/2 ">
-        <div className=" w-full mx-auto">
+        <div className=" w-[80%] mx-auto">
           <Link href="#hero">
-            <div className="flex items-center">
-              <span>Powered by Asad Enterprise</span>
-              <span className="w-20 h-20">
+            <div className=" flex items-center justify-center">
+              <div>Powered by Asad Enterprise</div>
+              <div className="w-20 h-20">
                 <Image
                   src={mainLogo}
                   alt="Asad Logo"
 
                   // className="object-contain"
                 />
-              </span>
+              </div>
             </div>
           </Link>
         </div>

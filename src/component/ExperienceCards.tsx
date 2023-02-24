@@ -8,6 +8,7 @@ type Props = {
 };
 
 const ExperienceCards = ({ experiences }: Props) => {
+  console.log(experiences, "experiences");
   return (
     <motion.article
       initial={{ opacity: 0 }}

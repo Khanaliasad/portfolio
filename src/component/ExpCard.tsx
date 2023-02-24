@@ -28,7 +28,7 @@ function ExpCard({ data }: Props) {
         <h4 className="text-4xl font-light">{data.JobTitle}</h4>
         <p className="text-2xl font-bold mt-1">{data.companyName}</p>
         <div className="flex space-x-2 my-2">
-          {data.technologies.map((elem) => {
+          {data?.technologies?.map((elem) => {
             return (
               <div key={elem?._id} className="m-1">
                 <Image
