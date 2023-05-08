@@ -43,13 +43,13 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
         <Header social={[social]} />
 
         {/* hero */}
-        <section id="hero" className="snap-start ">
+        <section id="hero" className="snap-start">
           {pageInfo?._id && <Hero pageInfo={pageInfo} />}
         </section>
 
         {/* About */}
         <section id="About" className="snap-center">
-          <About name={"About"} title={""} pageInfo={pageInfo} />
+          <About pageInfo={pageInfo} />
         </section>
         {/* #Experience*/}
 
@@ -74,18 +74,18 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
       </main>
 
       <footer className="fixed bottom-0 right-1/2 cursor-pointer  translate-x-1/2 ">
-        <div className=" w-[80%] mx-auto">
+        <div className=" w-full mx-auto">
           <Link href="#hero">
-            <div className=" flex items-center justify-center">
-              <div>Powered by Asad Enterprise</div>
-              <div className="w-20 h-20">
+            <div className="flex items-center">
+              <span>Powered by Asad Enterprise</span>
+              <span className="w-20 h-20">
                 <Image
                   src={mainLogo}
                   alt="Asad Logo"
 
                   // className="object-contain"
                 />
-              </div>
+              </span>
             </div>
           </Link>
         </div>
@@ -97,8 +97,11 @@ const Home = ({ pageInfo, experiences, skills, projects, social }: Props) => {
 export default Home;
 
 export const getStaticProps: any = async () => {
-  const pageInfo: PageInfo = await fetchPageInfos();
-  const experiences: Experience[] = await fetchExperiences();
+  try {
+    
+
+    const pageInfo: PageInfo = await fetchPageInfos();
+    const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const social: Social[] = await fetchSocials();
@@ -111,4 +114,7 @@ export const getStaticProps: any = async () => {
       social,
     },
   } as unknown;
+  } catch (error) {
+    return;  
+  }
 };

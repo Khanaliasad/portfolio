@@ -22,7 +22,7 @@ function Skills({ skills }: Props) {
         hover Over a skill for currency proficiency
       </h3>
       <div className="w-[80vw] flex flex-wrap sm:grid sm:grid-cols-4 sm:gap-1 lg:gap-20">
-        {skills.map((elem, index) => {
+        {skills?.map((elem, index) => {
           return (
             <SkillImage
               key={index}

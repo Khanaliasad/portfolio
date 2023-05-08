@@ -20,7 +20,7 @@ const Projects = ({ projects }: Props) => {
             <ProjectCard
               key={index}
               Index={index + 1}
-              Length={arr.length}
+              Length={arr?.length}
               Data={elem}
             />
           );

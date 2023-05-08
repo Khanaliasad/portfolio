@@ -29,7 +29,7 @@ function ProjectCard({ Index, Length, Data }: Props) {
           className="cursor-pointer"
         >
           <Image
-            src={imageRef.toString()}
+            src={imageRef?.toString()}
             width="300px"
             height="200px"
             alt="Case Study Image"

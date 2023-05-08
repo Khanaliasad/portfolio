@@ -17,7 +17,7 @@ function ExpCard({ data }: Props) {
         className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px]  object-cover object-center"
       >
         <Image
-          src={urlFor(data?.companyImage).url()}
+          src={urlFor(data?.companyImage)?.url()}
           alt={`logo of ${data?.company}`}
           className="object-cover"
           width={300}
@@ -25,8 +25,8 @@ function ExpCard({ data }: Props) {
         />
       </motion.div>
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{data.JobTitle}</h4>
-        <p className="text-2xl font-bold mt-1">{data.companyName}</p>
+        <h4 className="text-4xl font-light">{data?.JobTitle}</h4>
+        <p className="text-2xl font-bold mt-1">{data?.companyName}</p>
         <div className="flex space-x-2 my-2">
           {data?.technologies?.map((elem) => {
             return (
@@ -34,7 +34,7 @@ function ExpCard({ data }: Props) {
                 <Image
                   src={urlFor(elem?.image)?.url()}
                   alt={elem?.title}
-                  className="object-cover rounded-full bg-slate-800  "
+                  className="object-cover rounded-full bg-slate-800"
                   height={50}
                   width={50}
                 />
@@ -48,7 +48,7 @@ function ExpCard({ data }: Props) {
             ? "Current"
             : data?.dateEnded}
         </p>
-        <ul className="list-disc space-y-4 ml-5 text-lg h-80 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A] ">
+        <ul className="list-disc space-y-4 ml-5 text-lg h-80 overflow-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A]">
           {data?.points?.map((elem, index) => {
             return <li key={index}>{elem}</li>;
           })}

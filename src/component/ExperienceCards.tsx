@@ -20,8 +20,8 @@ const ExperienceCards = ({ experiences }: Props) => {
         Experience
       </h3>
       <div className="w-auto mt-5 flex space-x-5 overflow-x-scroll px-10 snap-x snap-mandatory  scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scrollbar-thin  ">
-        {experiences.map((elem) => {
-          return <ExpCard key={elem._id} data={elem} />;
+        {experiences?.map((elem) => {
+          return <ExpCard key={elem?._id} data={elem} />;
         })}
       </div>
     </motion.article>

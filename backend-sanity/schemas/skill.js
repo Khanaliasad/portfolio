@@ -17,6 +17,16 @@ export default {
       validation: (Rule) => Rule.min(1).max(100),
     },
     {
+      name: 'View',
+      type: 'boolean',
+      title: 'view',
+      description: 'Toggle this to show or hide skill',
+      initialValue: false,
+      options: {
+        layout: 'checkbox' // Use a checkbox layout instead of a toggle
+      }
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",

@@ -25,7 +25,7 @@ function Hero({ pageInfo }: Props) {
     deleteSpeed: 50,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   });
-
+console.log(' urlFor(pageInfo?.heroImage)?.url() ',  urlFor(pageInfo?.heroImage)?.url() )
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden ">
       <BackGroundCircles />

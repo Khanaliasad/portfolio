@@ -23,8 +23,8 @@ function SkillImage({ directionLeft, data }: Props) {
         <span className="w-12 h-12 sm:w-[100px] sm:h-[100px] xl:w-[150px] xl:h-[150px] block relative ">
           <Image
             src={urlFor(data?.image)?.url()}
-            alt={data.title}
-            title={data.title}
+            alt={data?.title}
+            title={data?.title}
             // height={150}
             // width={150}
             layout="fill"
@@ -34,7 +34,7 @@ function SkillImage({ directionLeft, data }: Props) {
         <div className="absolute  w-12 h-12 sm:w-[100px] sm:h-[100px] rounded-full xl:w-[150px] xl:h-[150px] top-1  opacity-0 border-gray-500 group-hover:opacity-80 group-hover:bg-white transition duration-300 ease-in-out">
           <div className="flex items-center justify-center h-full">
             <p className="text-xl font-bold text-black opacity-100">
-              {data.progress}%
+              {data?.progress}%
             </p>
           </div>
         </div>

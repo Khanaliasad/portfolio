@@ -21,9 +21,9 @@ function Header({ social }: Props) {
             {social?.map((social) => {
               return (
                 <SocialIcon
-                  key={social._id}
-                  url={social.url}
-                  title={social.title}
+                  key={social?._id}
+                  url={social?.url}
+                  title={social?.title}
                   fgColor="gray"
                   bgColor="transparent"
                 />
